@@ -1,7 +1,7 @@
 
 ---
 Power of different linear models. <br/><br/><img src='/images/bayes_strong-1.png'>
----
+
 
 
 If you want to test for a change over a variable we can consider some different ways to do it.

@@ -1,6 +1,6 @@
 ---
-statsforbios blog. 
----
+statsforbios blog.
+
 
 Finally think I might be managing to make a blog for stats for bios.
 www.twitter.com/statsforbios

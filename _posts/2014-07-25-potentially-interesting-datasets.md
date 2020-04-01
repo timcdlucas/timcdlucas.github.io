@@ -1,7 +1,7 @@
 
 ---
 Potentially interesting data. <br/><br/><img src='/images/datats.png'>
----
+
 
 I started looking through Figshare to find interesting datasets. As I found more, I decided to keep a list. So here it is. Potentially interesting datasets.
 

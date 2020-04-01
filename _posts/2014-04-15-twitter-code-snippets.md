@@ -1,7 +1,7 @@
 ---
-A primer on Bayesian mixed-effects models. <br/><br/><img src='/images/stratPhylo.png'>
----
- 
+140 character twitter code. <br/><br/><img src='/images/stratPhylo.png'>
+
+
 
 ## 140 character code
 

@@ -1,7 +1,7 @@
 
 ---
-A primer on Bayesian mixed-effects models. <br/><br/><img src='/images/monaLisa.png'>
----
+Terrible figure archive. <br/><br/><img src='/images/monaLisa.png'>
+
 
 
 I've been collecting and posting bad figures for a while now. I'll keep this page up to date with the figures that I post. Unfortunately it turns out the header figure was a hoax.

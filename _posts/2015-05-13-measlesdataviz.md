@@ -1,7 +1,7 @@
 
 ---
 Working through visualising the effects of the measles vaccine. <br/><br/><img src='/images/measlesTimeseries.png'>
----
+
 
 
 # Visualising the effects of the measles vaccine

@@ -1,7 +1,7 @@
 
 ---
 A primer on Bayesian mixed-effects models. <br/><br/><img src='/images/bayes_strong-1.png'>
----
+
 
 
 A primer on Bayesian mixed-effects models
