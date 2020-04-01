@@ -17,3 +17,5 @@ I currently study neglected tropical diseases while in my previous post doc I st
 I have a continuing interest in statistical methods for ecology.
 
 I have written a number of R packages which an be found on CRAN or on my [github](https://www.github.com/timcdlucas)
+
+![](/images//global_incidence_2016_pf.png)
