@@ -1,22 +1,17 @@
+
 ---
-layout: post-light-feature
-title: Measles Dataviz
-description: "Visualising the effects of the measles vaccine"
-categories: articles
-date: 2015-05-13
-image: 
-        feature: measlesOrig.jpeg
-comments: True
+title: "Visualising the effects of the measles vaccine"
+excerpt: "Working through visualising the effects of the measles vaccine. <br/><br/><img src='/images/shapefileraster-1.png'>"
+collection: posts
 ---
 
 
-
-## Measles vizualisation
+# Visualising the effects of the measles vaccine
 
 
 First there was the Wall Street Journal [vizualisation](http://graphics.wsj.com/infectious-diseases-and-vaccines/)
 
-Then [@RobertAllison\_\_](http://www.twitter.com/RobertAllison__) redrew the [plot](http://blogs.sas.com/content/sastraining/2015/02/17/how-to-make-infectious-diseases-look-better/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+sasblogs+%28SAS+Blogs%29). 
+Then [@RobertAllison\_\_](http://www.twitter.com/RobertAllison__) redrew the [plot](http://blogs.sas.com/content/sastraining/2015/02/17/how-to-make-infectious-diseases-look-better/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+sasblogs+%28SAS+Blogs%29).
 
 
 Then [@biomickwatson](www.twitter.com/biomickwatson) recreated the [plot](https://biomickwatson.wordpress.com/2015/04/09/recreating-a-famous-visualisation/). Finally, [@benjaminlmoore](http://www.twitter.com/benjaminlmoore) recreated the [plot](http://www.r-bloggers.com/recreating-the-vaccination-heatmaps-in-r/) in ggplot2.
@@ -64,14 +59,14 @@ y <- y[order(y$year),]
 row.labels <- rep("", 72)
 row.labels[c(1,11,21,31,41,51,61,71)] <- c("1930","1940","1950","1960","1970",
                                            "1980","1990","2000")
-                 
+
 cols <- colorRampPalette(c("red", "blue"))(100)
 bks <- seq(0, max(y[, -1], na.rm = TRUE), length.out = 101)
 
 
 par(cex.main=0.8)
 
-heatmap.2(as.matrix(t(y[,2:NCOL(y)])), Rowv=NULL, Colv=NULL, 
+heatmap.2(as.matrix(t(y[,2:NCOL(y)])), Rowv=NULL, Colv=NULL,
         dendrogram="none", trace="none", key=FALSE,
         labCol=row.labels, cexCol=1, lhei=c(0.15,1), lwid=c(0.1,1), margins=c(5,12),
         col=cols, breaks=bks, colsep=1:72, srtCol=0, rowsep=1:57, sepcolor="white",
@@ -90,9 +85,9 @@ heatmap.2(as.matrix(t(y[,2:NCOL(y)])), Rowv=NULL, Colv=NULL,
 </figure>
 
 
-OK. NA's are white. Other colours are ramped. That's good. The colour ramp here is funny because I'm using @biomickwatson's values which match the cases data rather than the incidence data. 
+OK. NA's are white. Other colours are ramped. That's good. The colour ramp here is funny because I'm using @biomickwatson's values which match the cases data rather than the incidence data.
 
-I like the labels on the right so I'll leave that. 
+I like the labels on the right so I'll leave that.
 
 
 Now to get some good colours. I might try and leave NA's white and have a ramp that doesn't include white. RColorBrewer asseeeeemble.
@@ -113,10 +108,10 @@ cols <- colorRampPalette(brewer.pal(8, 'Reds'))(100)
 bks <- seq(0, max(y[, -1], na.rm = TRUE), length.out = 101)
 
 par(cex.main=0.8)
-heatmap.2(as.matrix(t(y[,2:NCOL(y)])), Rowv=NULL, Colv=NULL, 
+heatmap.2(as.matrix(t(y[,2:NCOL(y)])), Rowv=NULL, Colv=NULL,
         dendrogram="none", trace="none", key=FALSE,
         labCol=row.labels, cexCol=1, lhei=c(0.15,1), lwid=c(0.1,1), margins=c(5,12),
-        breaks=bks, colsep=1:72, srtCol=0, rowsep=1:57, sepcolor="white", col=cols, 
+        breaks=bks, colsep=1:72, srtCol=0, rowsep=1:57, sepcolor="white", col=cols,
         add.expr=lines(c(32,32),c(0,1000),lwd=2),
         main='Measles cases in US states 1930-2001\nVaccine introduced 1961', na.color = grey(0.8))
 {% endhighlight %}
@@ -159,10 +154,10 @@ cols <- colorRampPalette(brewer.pal(8, 'Reds'))(100)
 bks <- seq(0, max(y2, na.rm = TRUE), length.out = 101)
 
 par(cex.main=0.8)
-heatmap.2(as.matrix(t(y2)), Rowv=NULL, Colv=NULL, 
+heatmap.2(as.matrix(t(y2)), Rowv=NULL, Colv=NULL,
         dendrogram="none", trace="none", key=FALSE,
         labCol=row.labels, cexCol=1, lhei=c(0.15,1), lwid=c(0.1,1), margins=c(5,12),
-        breaks=bks, colsep=1:72, srtCol=0, rowsep=1:57, sepcolor="white", col=cols, 
+        breaks=bks, colsep=1:72, srtCol=0, rowsep=1:57, sepcolor="white", col=cols,
         add.expr=lines(c(32,32),c(0,1000),lwd=2),
         main='Measles cases in US states 1930-2001\nVaccine introduced 1961', na.color = grey(0.8))
 {% endhighlight %}
@@ -178,7 +173,7 @@ heatmap.2(as.matrix(t(y2)), Rowv=NULL, Colv=NULL,
 </figure>
 
 
-Only 3 data points are affected. I'm torn here. 
+Only 3 data points are affected. I'm torn here.
 
 Now I want to try organising the data by measles burden. The areas with lots of measles are the important bit, so I think that makes sense. I think I'll just do mean (with NAs removed) and order by size. Certainly a useful thing could be to order by number of cases rather than incidence. But I don't want to go get the other dataset.
 
@@ -192,10 +187,10 @@ y3 <- y2[, rev(order(means))]
 
 
 par(cex.main=0.8)
-heatmap.2(as.matrix(t(y3)), Rowv=NULL, Colv=NULL, 
+heatmap.2(as.matrix(t(y3)), Rowv=NULL, Colv=NULL,
         dendrogram="none", trace="none", key=FALSE,
         labCol=row.labels, cexCol=1, lhei=c(0.15,1), lwid=c(0.1,1), margins=c(5,12),
-        breaks=bks, colsep=1:72, srtCol=0, rowsep=1:57, sepcolor="white", col=cols, 
+        breaks=bks, colsep=1:72, srtCol=0, rowsep=1:57, sepcolor="white", col=cols,
         add.expr=lines(c(32,32),c(0,1000),lwd=2),
         main='Measles cases in US states 1930-2001\nVaccine introduced 1961', na.color = grey(0.85))
 {% endhighlight %}
@@ -214,7 +209,7 @@ heatmap.2(as.matrix(t(y3)), Rowv=NULL, Colv=NULL,
 I think the reordering is an improvement. It's interesting at least.
 
 
-Finally, I just want to tweak a few things. This turns out to be a complete pain. I had ago hacking `heatmap.2()`. The new function is saved in customHeatmap.R. 
+Finally, I just want to tweak a few things. This turns out to be a complete pain. I had ago hacking `heatmap.2()`. The new function is saved in customHeatmap.R.
 
 
 {% highlight python %}
@@ -223,11 +218,11 @@ source('customHeatmap.R')
 customHeatmap(as.matrix(t(y3)), Rowv=NULL, Colv=NULL, lmat = rbind(c(0,3),c(2,1),c(0,4)),
         dendrogram="none", trace="none", key=TRUE,
         labCol=row.labels, lhei=c(0.15,1,0.25), lwid=c(0.1,1), margins=c(3,6),
-        breaks=bks, colsep=1:72, rowsep=1:57, sepcolor="white", col=cols, 
+        breaks=bks, colsep=1:72, rowsep=1:57, sepcolor="white", col=cols,
         add.expr=lines(c(32,32),c(0,1000),lwd=2),
         main='Measles incidence in US states', na.color = grey(0.8),
         density.info = 'none', RowLabColors = grey(0.4), cexCol = 1.3, key.title = '',
-        cexRow = 0.65, ColLabColors = grey(0.4), key.xlab = 'Cases per 100,000', titleColor = grey(0.4), key.par = list(col = grey(0.6), lwd = 0.1 ) 
+        cexRow = 0.65, ColLabColors = grey(0.4), key.xlab = 'Cases per 100,000', titleColor = grey(0.4), key.par = list(col = grey(0.6), lwd = 0.1 )
         )
 {% endhighlight %}
 
@@ -266,7 +261,3 @@ Still not perfect. But I'm bored now.
   ga('send', 'pageview');
 
 </script>
-
-
-
-
