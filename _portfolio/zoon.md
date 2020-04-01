@@ -1,6 +1,6 @@
 ---
 title: "zoon"
-excerpt: "R package for reproducible, modular species distribution model<br/><br/><img src='/images/malariaAtlas.png'>"
+excerpt: "R package for reproducible, modular species distribution model<br/><br/><img src='/images/interactive_map.png'>"
 collection: portfolio
 ---
 
