@@ -1,6 +1,6 @@
 
 ---
-Power of different linear models. <br/><br/><img src='/images/bayes_strong-1.png'>
+Power of different linear models.
 
 
 
