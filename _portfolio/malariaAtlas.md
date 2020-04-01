@@ -1,7 +1,7 @@
 ---
 title: "malariaAtlas"
 excerpt: "R package for accessing data from the Malaria Atlas Project<br/><br/><img src='/images/malariaAtlas.png'>"
-collection: software
+collection: portfolio
 ---
 
 This package allows users to download prevalence surveys, mosquito occurrences, geographic shapefiles and modelled raster surfaces from the Malaria Atlas Project.

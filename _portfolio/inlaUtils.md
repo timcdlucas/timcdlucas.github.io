@@ -1,7 +1,7 @@
 ---
 title: "INLAutils"
 excerpt: "R package providing utilities for INLA. <br/><br/><img src='/images/shapefileraster-1.png'>"
-collection: software
+collection: portfolio
 ---
 
 This R package provides utilities for the INLA package.
