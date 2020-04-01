@@ -1,7 +1,6 @@
 
 ---
-title: "Visualising the effects of the measles vaccine"
-excerpt: "Working through visualising the effects of the measles vaccine. <br/><br/><img src='/images/shapefileraster-1.png'>"
+"Working through visualising the effects of the measles vaccine. <br/><br/><img src='/images/shapefileraster-1.png'>"
 collection: posts
 ---
 
