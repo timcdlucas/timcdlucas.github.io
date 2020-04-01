@@ -1,6 +1,6 @@
 ---
 title: "disaggregation"
-excerpt: "R package for disaggregation regression<br/><br/><img src='/images/malariaAtlas.png'>"
+excerpt: "R package for disaggregation regression<br/><br/><img src='/images/disagreggation.png'>"
 collection: portfolio
 ---
 
