@@ -1,9 +1,6 @@
+
 ---
-layout: post-light-feature
-title: Power of different linear models
-description: "Power of different linear models"
-categories: articles
-date: 2015-01-18
+Power of different linear models. <br/><br/><img src='/images/bayes_strong-1.png'>
 ---
 
 
@@ -66,15 +63,9 @@ And plot the results.
 
 <img src="../../images/simPlot-1.png" title="plot of chunk simPlot" alt="plot of chunk simPlot" width="500" />
 
-So, using data from the edges of our range of x values gives us more power (lower p-values). 
+So, using data from the edges of our range of x values gives us more power (lower p-values).
 Also, it's interesting to note that doing a discrete ANOVA with the x values as a factor is identical to treating this as a continuous linear model.
-This will not be true if you have more than two groups though. 
+This will not be true if you have more than two groups though.
 Furthermore, if you actually want to use this as a linear model, you will have to do an extra step to scale the coefficients if you do an ANOVA rather than a linear model.
 
 So... that was kinda fun. And another chance to get to know ggplot2 better. Some code is suppressed here but you can see the full knitr document [here](https://github.com/timcdlucas/statsforbios/blob/master/lmVSanova.Rmd).
-
-
-
-
-
-

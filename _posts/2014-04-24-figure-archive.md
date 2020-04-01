@@ -1,12 +1,6 @@
+
 ---
-layout: post-light-feature
-title: Terrible figure archive
-description: "The bad and the ugly"
-categories: articles
-date: 2014-04-24
-image: 
-        feature: monaLisa.png
-comments: True
+A primer on Bayesian mixed-effects models. <br/><br/><img src='/images/monaLisa.png'>
 ---
 
 
@@ -118,7 +112,3 @@ And of course, gene expression matrices.
   ga('send', 'pageview');
 
 </script>
-
-
-
-

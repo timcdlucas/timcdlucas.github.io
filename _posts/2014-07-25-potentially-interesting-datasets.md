@@ -1,14 +1,7 @@
----
-layout: post-light-feature
-title: Potentially interesting datasets
-description: The QI of data
-categories: articles
-date: 2014-07-25
-image: 
-        feature: datats.png
-comments: True
----
 
+---
+A primer on Bayesian mixed-effects models. <br/><br/><img src='/images/datats.png'>
+---
 
 I started looking through Figshare to find interesting datasets. As I found more, I decided to keep a list. So here it is. Potentially interesting datasets.
 
@@ -63,8 +56,3 @@ The aim is for the datasets to have some 'depth'. A single time series while cer
 
 <blockquote class="twitter-tweet" lang="en"><p>Potentially interesting dataset for the day. Location of 350 litter items w/ litter type. N. Wales. <a href="http://t.co/BszEsWmH5W">http://t.co/BszEsWmH5W</a></p>&mdash; Stats for bios (@statsforbios) <a href="https://twitter.com/statsforbios/statuses/491950420646825986">July 23, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-
-
-
