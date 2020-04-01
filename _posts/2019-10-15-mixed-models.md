@@ -1,14 +1,6 @@
 
----
-layout: post-light-feature
-title: A primer on Bayesian mixed-effects models
-description: "A primer on Bayesian mixed-effects models"
-categories: articles
-date: 2019-10-15
-comments: True
-image:
-  feature: surface1.png
----
+A primer on Bayesian mixed-effects models
+===========================================
 
     knitr::opts_chunk$set(cache = TRUE, fig.width = 8, fig.height = 5)
 
@@ -81,9 +73,9 @@ things) and use that as our response.
     ## [25] "permissions_info"          "citation1"                
     ## [27] "citation2"                 "citation3"
 
-    dtime <- d %>% 
-              filter(!is.na(examined), !is.na(year_start)) %>% 
-              mutate(log_pr = log(pr + 0.1)) %>% 
+    dtime <- d %>%
+              filter(!is.na(examined), !is.na(year_start)) %>%
+              mutate(log_pr = log(pr + 0.1)) %>%
               select(country, year_start, log_pr, pr)
 
 We will ask two broad questions.
@@ -109,21 +101,21 @@ Let's summarise and plot the data.
     dmean$country %>% table
 
     ## .
-    ##  Afghanistan   Bangladesh       Bhutan     Cambodia        China 
-    ##           64            0            0          187           25 
-    ##        India    Indonesia         Iraq         Laos     Malaysia 
-    ##           76          124            0           20            0 
-    ##      Myanmar        Nepal     Pakistan  Philippines Saudi Arabia 
-    ##           26            0            0            0            0 
-    ##    Sri Lanka   Tajikistan     Thailand  Timor-Leste       Turkey 
-    ##            0            2           72           11            8 
-    ##      Vietnam        Yemen 
+    ##  Afghanistan   Bangladesh       Bhutan     Cambodia        China
+    ##           64            0            0          187           25
+    ##        India    Indonesia         Iraq         Laos     Malaysia
+    ##           76          124            0           20            0
+    ##      Myanmar        Nepal     Pakistan  Philippines Saudi Arabia
+    ##           26            0            0            0            0
+    ##    Sri Lanka   Tajikistan     Thailand  Timor-Leste       Turkey
+    ##            0            2           72           11            8
+    ##      Vietnam        Yemen
     ##           67           26
 
     dmean$year %>% table
 
     ## .
-    ## 2000 2001 2002 2003 2004 
+    ## 2000 2001 2002 2003 2004
     ##   79  111  192  209  117
 
 Question one: what was the mean malaria prevalence per country in the period 2000 - 2004
@@ -136,18 +128,18 @@ Question one: what was the mean malaria prevalence per country in the period 200
 
 <!-- -->
 
-    dmean <- dmean %>% 
-               group_by(country) %>% 
+    dmean <- dmean %>%
+               group_by(country) %>%
                mutate(n = n())
 
-    ggplot(dmean, aes(x = country, y = pr, colour = n < 10)) + 
+    ggplot(dmean, aes(x = country, y = pr, colour = n < 10)) +
       geom_boxplot() +
       geom_point() +
       ggtitle('Malaria prevalence by country in 2000-2004')
 
 ![](/images//data_plot1-1.png)
 
-    ggplot(dmean, aes(x = country, y = log_pr, colour = n < 10)) + 
+    ggplot(dmean, aes(x = country, y = log_pr, colour = n < 10)) +
       geom_boxplot() +
       geom_point() +
       ggtitle('Log malaria prevalence by country in 2000-2004')
@@ -170,10 +162,10 @@ global intercept.
     m1 <- lm(log_pr ~ 1, data = dmean)
     coefficients(m1)
 
-    ## (Intercept) 
+    ## (Intercept)
     ##    -1.85726
 
-    ggplot(dmean, aes(x = country, y = log_pr)) + 
+    ggplot(dmean, aes(x = country, y = log_pr)) +
       geom_boxplot() +
       geom_point() +
       ggtitle('Log malaria prevalence and Asia global mean') +
@@ -216,21 +208,21 @@ So now we can estimate this model with least squares
     m2 <- lm(log_pr ~ country, data = dmean)
     coefficients(m2)
 
-    ##        (Intercept)    countryCambodia       countryChina 
-    ##         -1.9885722          0.2247165         -0.3045652 
-    ##       countryIndia   countryIndonesia        countryLaos 
-    ##          0.1992390          0.1799838          0.5971321 
-    ##     countryMyanmar  countryTajikistan    countryThailand 
-    ##          0.5630916         -0.1027141         -0.1637883 
-    ## countryTimor-Leste      countryTurkey     countryVietnam 
-    ##          0.0803858         -0.3140129          0.1394583 
-    ##       countryYemen 
+    ##        (Intercept)    countryCambodia       countryChina
+    ##         -1.9885722          0.2247165         -0.3045652
+    ##       countryIndia   countryIndonesia        countryLaos
+    ##          0.1992390          0.1799838          0.5971321
+    ##     countryMyanmar  countryTajikistan    countryThailand
+    ##          0.5630916         -0.1027141         -0.1637883
+    ## countryTimor-Leste      countryTurkey     countryVietnam
+    ##          0.0803858         -0.3140129          0.1394583
+    ##       countryYemen
     ##         -0.0461457
 
     pred2 <- data.frame(dmean_pred, pred = predict(m2, newdata = dmean_pred))
 
 
-    ggplot(dmean, aes(x = country, y = log_pr, colour = n < 10)) + 
+    ggplot(dmean, aes(x = country, y = log_pr, colour = n < 10)) +
       geom_boxplot() +
       geom_point() +
       geom_point(data = pred2, aes(country, pred), colour = 'black', size = 4) +
@@ -275,17 +267,17 @@ learning country level intercepts, not the global mean.
 
     # Very vague priors first.
 
-    priors <- list(mean.intercept = -2, prec.intercept = 1e-4, 
+    priors <- list(mean.intercept = -2, prec.intercept = 1e-4,
                    mean = 0, prec = 1e-4)
 
-    bm1 <- inla(log_pr ~ country, data = dmean_both, 
+    bm1 <- inla(log_pr ~ country, data = dmean_both,
                 control.fixed = priors,
                 control.predictor = list(compute = TRUE))
 
     predb1 <- data.frame(dmean_pred, pred = bm1$summary.fitted.values[pred_ii, 1])
 
 
-    ggplot(dmean, aes(x = country, y = log_pr, colour = n < 10)) + 
+    ggplot(dmean, aes(x = country, y = log_pr, colour = n < 10)) +
       geom_boxplot() +
       geom_point() +
       geom_point(data = predb1, aes(country, pred), colour = 'black', size = 4) +
@@ -305,17 +297,17 @@ Our estimates for the global mean will be dominated by countries with
 lots of data. But we won't have put all our statistical power into
 learning the country level parameters.
 
-    priors <- list(mean.intercept = -2, prec.intercept = 1e-4, 
+    priors <- list(mean.intercept = -2, prec.intercept = 1e-4,
                    mean = 0, prec = 100)
 
-    bm2 <- inla(log_pr ~ country, data = dmean_both, 
+    bm2 <- inla(log_pr ~ country, data = dmean_both,
                 control.fixed = priors,
                 control.predictor = list(compute = TRUE))
 
     predb2 <- data.frame(dmean_pred, pred = bm2$summary.fitted.values[pred_ii, 1])
 
 
-    ggplot(dmean, aes(x = country, y = log_pr, colour = n < 10)) + 
+    ggplot(dmean, aes(x = country, y = log_pr, colour = n < 10)) +
       geom_boxplot() +
       geom_point() +
       geom_point(data = predb1, aes(country, pred), colour = 'black', size = 4, alpha = 0.3) +
@@ -387,7 +379,7 @@ So for now we'll say *P*(*σ* &gt; 0.1)=1%.
 
     priors <- list(mean.intercept = -2, prec.intercept = 1e-4)
     hyperprior <-  list(prec = list(prior="pc.prec", param = c(0.1, 0.01)))
-                 
+
     f <- log_pr ~ f(country, model = 'iid', hyper = hyperprior)  
     mm1 <- inla(f, data = dmean_both,
                 control.fixed = priors,
@@ -408,7 +400,7 @@ So for now we'll say *P*(*σ* &gt; 0.1)=1%.
 
     predm1 <- data.frame(dmean_pred, pred = mm1$summary.fitted.values[pred_ii, 1])
 
-    ggplot(dmean, aes(x = country, y = log_pr, colour = n < 10)) + 
+    ggplot(dmean, aes(x = country, y = log_pr, colour = n < 10)) +
       geom_boxplot() +
       geom_point() +
       geom_point(data = predb1, aes(country, pred), colour = 'black', size = 4, alpha = 0.3) +
@@ -502,25 +494,25 @@ Question two: What were the malaria trends in Asia and in each country.
     dtime$country %>% table
 
     ## .
-    ##  Afghanistan   Bangladesh       Bhutan     Cambodia        China 
-    ##          224          364           23          211          102 
-    ##        India    Indonesia         Iraq         Laos     Malaysia 
-    ##          219         1117           11           76           15 
-    ##      Myanmar        Nepal     Pakistan  Philippines Saudi Arabia 
-    ##           38            0           56          350            2 
-    ##    Sri Lanka   Tajikistan     Thailand  Timor-Leste       Turkey 
-    ##           18            8          105           11            8 
-    ##      Vietnam        Yemen 
+    ##  Afghanistan   Bangladesh       Bhutan     Cambodia        China
+    ##          224          364           23          211          102
+    ##        India    Indonesia         Iraq         Laos     Malaysia
+    ##          219         1117           11           76           15
+    ##      Myanmar        Nepal     Pakistan  Philippines Saudi Arabia
+    ##           38            0           56          350            2
+    ##    Sri Lanka   Tajikistan     Thailand  Timor-Leste       Turkey
+    ##           18            8          105           11            8
+    ##      Vietnam        Yemen
     ##          150          136
 
     dtime$year %>% table
 
     ## .
-    ## 1985 1986 1987 1988 1989 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999 
-    ##   64   64   49   12   39   33   50  114   60  136   52  206  125   79   41 
-    ## 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 
-    ##   79  111  192  209  117  216  175  650  223   10   35    1   34   60    4 
-    ## 2015 
+    ## 1985 1986 1987 1988 1989 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999
+    ##   64   64   49   12   39   33   50  114   60  136   52  206  125   79   41
+    ## 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014
+    ##   79  111  192  209  117  216  175  650  223   10   35    1   34   60    4
+    ## 2015
     ##    4
 
 Note that Bhutan and Iraq have one data point each. Start thinking how
@@ -531,14 +523,14 @@ model. The "random" component was the iid country effect and we were
 estimating many intercepts. Now we will look at a random slopes models.
 The regression slopes will become our random component.
 
-    ggplot(dtime, aes(x = year_start, y = pr)) + 
+    ggplot(dtime, aes(x = year_start, y = pr)) +
       geom_point(alpha = 0.4) +
       facet_wrap(~ country, scales = 'free_y', ncol = 3) +
       ggtitle('Malaria prevalence by country through time')
 
 ![](/images//data_plot2-1.png)
 
-    ggplot(dtime, aes(x = year_start, y = log_pr)) + 
+    ggplot(dtime, aes(x = year_start, y = log_pr)) +
       geom_point(alpha = 0.4) +
       facet_wrap(~ country, scales = 'free_y', ncol = 3) +
       ggtitle('Log malaria prevalence by country through time')
@@ -558,7 +550,7 @@ lines.
 
 
 
-    ggplot(dtime, aes(x = year_start, y = log_pr)) + 
+    ggplot(dtime, aes(x = year_start, y = log_pr)) +
       geom_point(alpha = 0.4) +
       facet_wrap(~ country, ncol = 3) +
       geom_line(data = pred3, aes(y = pred)) +
@@ -576,7 +568,7 @@ effect but for now it isn't.
 
 
 
-    ggplot(dtime, aes(x = year_start, y = log_pr)) + 
+    ggplot(dtime, aes(x = year_start, y = log_pr)) +
       geom_point(alpha = 0.4) +
       facet_wrap(~ country, ncol = 3) +
       geom_line(data = pred4  , aes(y = pred)) +
@@ -602,7 +594,7 @@ We can fit this model with least squares.
     ## Warning in predict.lm(m5, newdata = dtime_pred): prediction from a rank-
     ## deficient fit may be misleading
 
-    ggplot(dtime, aes(x = year_start, y = log_pr)) + 
+    ggplot(dtime, aes(x = year_start, y = log_pr)) +
       geom_point(alpha = 0.4) +
       facet_wrap(~ country, ncol = 3, scale = 'free_y') +
       geom_line(data = pred5, aes(y = pred)) +
@@ -627,9 +619,9 @@ let's switch to a Bayesian model.
     pmean <- c(rep(list(0), length(names)), -0.5) # 1 is the mean for intercepts,-0.5 is the mean for slopes.
     names(pmean) <- c(names, 'default')
     # 100 is the precision for the intercepts, 50 is the precision for the slopes.
-    pprec <- c(rep(list(0.1), length(names)), 0.001) 
+    pprec <- c(rep(list(0.1), length(names)), 0.001)
     names(pprec) <- c(names, 'default')
-    priors <- list(mean.intercept = -2, prec.intercept = 1e-4, 
+    priors <- list(mean.intercept = -2, prec.intercept = 1e-4,
                    mean = pmean, prec = pprec)
 
 
@@ -640,7 +632,7 @@ let's switch to a Bayesian model.
 
 
 
-    ggplot(dtime, aes(x = year_start, y = log_pr)) + 
+    ggplot(dtime, aes(x = year_start, y = log_pr)) +
       geom_point(alpha = 0.4) +
       facet_wrap(~ country, ncol = 3, scale = 'fixed') +
       geom_line(data = pred5, aes(y = pred), alpha = 0.3) +
@@ -683,7 +675,7 @@ And as above we can use penalised complexity priors.
     # For the formula we need year_start in for our global term.
     # The global intercept is just the intercept and is included by default
     f <- log_pr ~ year_start +
-           f(country, model = 'iid', hyper = hyper.intercept) + 
+           f(country, model = 'iid', hyper = hyper.intercept) +
            f(country2, year_start, model = 'iid', hyper = hyper.slope)
 
     mm2 <- inla(f, data = dtime_both,
@@ -695,7 +687,7 @@ And as above we can use penalised complexity priors.
 
 
 
-    ggplot(dtime, aes(x = year_start, y = log_pr)) + 
+    ggplot(dtime, aes(x = year_start, y = log_pr)) +
       geom_point(alpha = 0.4) +
       facet_wrap(~ country, ncol = 3, scale = 'fixed') +
       geom_line(data = pred5, aes(y = pred), alpha = 0.3) +
@@ -792,13 +784,13 @@ this.
     ## Turkey        -2.192474
     ## Vietnam       -1.850997
     ## Yemen         -2.020359
-    ## 
+    ##
     ## attr(,"class")
     ## [1] "coef.mer"
 
     fixef(mm3)
 
-    ## (Intercept) 
+    ## (Intercept)
     ##   -1.893768
 
     f2 <- log_pr ~ year_start + (year_start | country)
@@ -837,13 +829,13 @@ this.
     ## Turkey          24.00437 -0.01311285
     ## Vietnam         23.67971 -0.01283811
     ## Yemen           23.36557 -0.01257216
-    ## 
+    ##
     ## attr(,"class")
     ## [1] "coef.mer"
 
     fixef(mm4)
 
-    ## (Intercept)  year_start 
+    ## (Intercept)  year_start
     ##  23.7018017  -0.0128519
 
 R is complaining about not being able to fit the model properly. I don't
