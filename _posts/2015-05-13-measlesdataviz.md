@@ -1,7 +1,6 @@
 
 ---
-"Working through visualising the effects of the measles vaccine. <br/><br/><img src='/images/shapefileraster-1.png'>"
-collection: posts
+Working through visualising the effects of the measles vaccine. <br/><br/><img src='/images/measlesTimeseries.png'>
 ---
 
 
