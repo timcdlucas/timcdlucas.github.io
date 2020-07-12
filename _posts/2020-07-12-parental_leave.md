@@ -19,7 +19,7 @@ outline. should you work, how can you work?
 --->
 
 
-I recently published my first sole author paper (link)[https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1002/ecm.1422]. 
+I recently published my first sole author paper [link](https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1002/ecm.1422). 
 It is a review of methods for interpreting machine learning models (translucent boxes rather than black boxes).
 I thought I'd write about the process because most of the paper was written while I was on shared parental leave.
 So I thought I'd discuss whether you should work while on parental leave and give some tips on working while on parental leave (many of which are useful for working as a parent more generally).
