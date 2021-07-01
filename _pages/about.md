@@ -8,19 +8,19 @@ redirect_from:
   - /about.html
 ---
 
-I am an MRC ERC fellow at the [Centre for Environment and Health](http://www.environment-health.ac.uk/), Imperial College.
+I am a lecturer in the [Dept. of Health Sciences](https://le.ac.uk/health-sciences) at the University of Leicester.
 My interests encompass statistical methods and mathematical models for studying disease.
-The aim of my fellowship is to develop geospatial methods for disease mapping that properly account for human movement.
-You're not just exposed to air pollution at your home, you are also exposed at work and places you visit.
-Standard geostatistical models do not account for this fact.
-
+In particular I'm interested in studying methods that account for multiple temporal or spatial scales.
+For example, disease progression or diagnosis is typically quite a slow process, but we are exposed to environmental factors such as air pollution every second.
+Depending on our movement patterns, we can have very different exposures from one minute to the next.
 
 I have a continuing interest in infectious disease models and statistical methods for ecology.
 Recently this has involved developing models of contact tracing to help guide COVID-19 policy.
-Previously, I worked with Deirdre Hollingsworth at the Big Data Institute, University of Oxford on neglected tropical diseases.
-Before that I worked with the Malaria Atlas Project where I developed geostatistical disaggregation models.
+Previously, I worked as a Research Fellow at Imperial College.
+Before that I worked with Deirdre Hollingsworth and the Malaria Atlas Project at the Big Data Institute, University of Oxford on neglected tropical diseases and malaria.
 
 Please feel free to email me to discuss stats, modelling, R or anything else.
+If you are a student looking for opportunities such as masters or PhD projects please email to say hello, though having just started as a lecturer it might take me a while to work out what's going.
 My address is timcdlucas --- gmail --- com.
 Or you can say hello on twitter @timcdlucas and @StatsForBios.
 
