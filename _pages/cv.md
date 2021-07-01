@@ -13,10 +13,13 @@ redirect_from:
 
 Appointments
 ======
-* 2020 - present: MRC ERC research fellow.
+* 2021 - present: Lecturer
+  * University of Leicester
+  
+* 2020 - 2021: MRC ERC research fellow.
   * Imperial College
 
-* 2020 : Senior post doc studying Neglected Tropical Diseases.
+* 2020: Senior post doc studying Neglected Tropical Diseases.
   * University of Oxford
 
 * 2016 - 2020: Post doc studying geospatial methods for malaria mapping
