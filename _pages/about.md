@@ -20,8 +20,9 @@ Previously, I worked as a Research Fellow at Imperial College.
 Before that I worked with Deirdre Hollingsworth and the Malaria Atlas Project at the Big Data Institute, University of Oxford on neglected tropical diseases and malaria.
 
 Please feel free to email me to discuss stats, modelling, R or anything else.
-If you are a student looking for opportunities such as masters or PhD projects please email to say hello, though having just started as a lecturer it might take me a while to work out what's going.
-My address is timcdlucas --- gmail --- com.
+If you are a student looking for opportunities such as masters or PhD projects please email to say hello.
+There are studentships or pre-doctoral fellowships we could develop a project for.
+My address is tim.lucas --- at --- le.ac.uk.
 Or you can say hello on twitter @timcdlucas and @StatsForBios.
 
 
