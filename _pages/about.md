@@ -25,7 +25,19 @@ There are studentships or pre-doctoral fellowships we could develop a project fo
 My address is tim.lucas --- at --- le.ac.uk.
 Or you can say hello on twitter @timcdlucas and @StatsForBios.
 
+I have written a number of R packages which can be found on CRAN or on my [github](https://www.github.com/timcdlucas).
 
-I have written a number of R packages which can be found on CRAN or on my [github](https://www.github.com/timcdlucas)
+Lab Group
+-----------
 
+I currently supervise these people in some capacity.
+
+### PhD students
+
+Hayley Smith. [@96HayleySmith](https://twitter.com/96HayleySmith). Combining neural networks and survival models and working out how to fairly compare machine learning and statistical models.
+
+Enzo Cerullo. [@enzo_cerullo](https://twitter.com/enzo_cerullo). Methods for assessing test accuracy in the absence of a gold standard [pdf](https://arxiv.org/abs/2103.06858). Meta-analyses. [Scholar](https://scholar.google.com/citations?user=OFlV97sAAAAJ&hl=en&oi=ao)
+
+<br>
+<br>
 ![](/images//global_incidence_2016_pf.png)
