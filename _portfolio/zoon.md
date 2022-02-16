@@ -11,7 +11,7 @@ I wrote the first version of the package during an internship supervised by Nick
 Lots more work has been done to the package by those mentioned above and Tom August.
 
 
-[See the github page here](https://github.com/zoom/zoon)
+[See the github page here](https://github.com/zoonproject/zoon)
 
 [See the CRAN page here](https://CRAN.R-project.org/package=zoon)
 
