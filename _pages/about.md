@@ -25,13 +25,12 @@ Before that I worked with Deirdre Hollingsworth and the Malaria Atlas Project at
 If you are a student looking for opportunities such as masters or PhD projects please email to say hello.
 My address is tim.lucas --- at --- le.ac.uk.
 Or you can say hello on twitter @timcdlucas and @StatsForBios.
-I currently have a (competition funded) [project out to advert](https://le.ac.uk/study/research-degrees/funded-opportunities/future-100-phd-cls); stats and machine learning methods to relate high resolution air pollution data and low resolution health data. 
 There are studentships or [pre-doctoral fellowships](https://www.google.com/search?q=nihr+predoctoral+fellowship&rlz=1C1GCEA_enGB962GB962&oq=&sourceid=chrome&ie=UTF-8) we could develop a project for.
 I haven't yet supervised a student through an entire PhD. 
 However, my belief is that the primary aim in a PhD is simply to be happy and healthy, now and in the future.
 The secondary aim is to graduate.
 Gaining skills, doing exciting science and publishing papers are subsidiary to the above.
-I want to be a thoroughly supportive supervisor no matter your strengths, weaksnesses and background.
+I want to be a thoroughly supportive supervisor no matter your strengths, weaknesses and background.
 
 
 
