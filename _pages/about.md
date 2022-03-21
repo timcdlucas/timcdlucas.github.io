@@ -9,7 +9,9 @@ redirect_from:
 ---
 
 I am a lecturer in the [Dept. of Health Sciences](https://le.ac.uk/health-sciences) at the University of Leicester.
-Please feel free to email me to discuss stats, modelling, R or anything else.
+Please feel free to email me to discuss stats, modelling, R, job opportunities or anything else.
+My address is tim.lucas --- at --- le.ac.uk.
+
 
 My interests encompass statistical methods and mathematical models for studying disease.
 In particular I'm interested in studying methods that account for multiple temporal or spatial scales.
@@ -23,9 +25,10 @@ Before that I worked with Deirdre Hollingsworth and the Malaria Atlas Project at
 
 
 If you are a student looking for opportunities such as masters or PhD projects please email to say hello.
-My address is tim.lucas --- at --- le.ac.uk.
-Or you can say hello on twitter @timcdlucas and @StatsForBios.
+Or you can say hello on twitter [@timcdlucas](www.twitter.com/timcdlucas) or [@StatsForBios](www.twitter.com/statsforbios).
 There are studentships or [pre-doctoral fellowships](https://www.google.com/search?q=nihr+predoctoral+fellowship&rlz=1C1GCEA_enGB962GB962&oq=&sourceid=chrome&ie=UTF-8) we could develop a project for.
+I don't currently have funding for any PhD students.
+I will always announce them on twitter and I will try to add them here.
 I haven't yet supervised a student through an entire PhD. 
 However, my belief is that the primary aim in a PhD is simply to be happy and healthy, now and in the future.
 The secondary aim is to graduate.
