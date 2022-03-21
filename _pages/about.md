@@ -50,7 +50,7 @@ Enzo Cerullo. [@enzo_cerullo](https://twitter.com/enzo_cerullo). Methods for ass
 
 ### Post Docs
 
-Hannah Worboys. [@HannahWorboys41](https://twitter.com/HannahWorboys41). 0.5fte post doc planning evaluation studies for [P-STEP] app(https://le.ac.uk/cehs/research/personalised-space-technology-exercise-platform). 0.5fte PhD student but not supervised by me. How are transplants and mortality used when evaluating [quality of life](https://bmjopen.bmj.com/content/11/8/e048179.full).
+Hannah Worboys. [@HannahWorboys41](https://twitter.com/HannahWorboys41). 0.5fte post doc planning evaluation studies for the [P-STEP app](https://le.ac.uk/cehs/research/personalised-space-technology-exercise-platform). 0.5fte PhD student but not supervised by me. How are transplants and mortality used when evaluating [quality of life](https://bmjopen.bmj.com/content/11/8/e048179.full).
 
 
 
