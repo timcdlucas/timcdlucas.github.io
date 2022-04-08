@@ -7,10 +7,12 @@ Disaggregation regression workshop<br/><br/>
 Disaggregation regression workshop
 ===========================================
 
-Date change
-------------
 
-Due to strike action I am changing the date for this workshop. 
+The recording of this workshop is here. [https://www.youtube.com/watch?v=frKbnV5PxH4](https://www.youtube.com/watch?v=frKbnV5PxH4)
+
+
+
+
 I am now running it on both the 31st of March 2022 and the 7th of April 2022. 
 Both 3-5pm GMT.
 There may be some space left so please email if you are interested.
