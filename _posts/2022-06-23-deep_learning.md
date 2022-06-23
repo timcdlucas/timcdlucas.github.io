@@ -36,9 +36,9 @@ malaria mapping or SDMs or prognostic models or... - I fully acknowledge the suc
 
 So the first thing to note is that there's two ways that depth in neural networks and other methods is commonly used.
 The first is the case of having multiple dense hidden layers (i.e. all nodes in each layer is connected to all nodes in the next layer).
-As far as I understand this type architecture is no that important to the success of deep learning.
+As far as I understand this type of architecture is not that important to the success of deep learning.
 I don't quite understand the benefits of this architecture compared to a shallow but very wide neural network (one hidden layer with a lot of nodes) but they are commonly used so they must be useful.
-However, the important thing here is that ultimately all the architecture provides is increased flexibility, or nonlinearity, in the model.
+However, the important thing here is that ultimately, the only thing that this architecture provides is increased flexibility, or nonlinearity, in the model.
 However, something like a RandomForest or boosted regression trees can have unlimited nonlinearity.
 So this architecture isn't providing anything particularly unusual.
 Furthermore I've had a pretty good go at using deep, dense neural networks to map malaria with very little success. 
@@ -50,7 +50,7 @@ As we get more data, these architectures may do about as well as tree based meth
 
 
 
-The architectures that have really driven the success of deep learning as we know is are convolutional neural networks.
+The architectures that have really driven the success of deep learning as we know it are convolutional neural networks.
 These are the neural networks used for image and video analysis including image classification, image segmentation, self driving cars etc.
 These methods generally exploit the spatial (and/or temporal) structure of the images or videos used to train them. 
 And specifically they make good predictions by learning good ways to represent the data.
