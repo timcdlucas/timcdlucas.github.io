@@ -88,7 +88,7 @@ Maybe I'll come back and edit this is 6 months when I've done more reading.
 
 
 
-* The fact that some of the areas are hot (high malaria) and some of the areas are cooler (low malaria) may well tell you that in aggregate there will be intermediate malaria risk in the area. But this simpler fact can be handled much more directly with disaggregation regression, which is precisely what I have been working on for five years.
+*The fact that some of the areas are hot (high malaria) and some of the areas are cooler (low malaria) may well tell you that in aggregate there will be intermediate malaria risk in the area. But this simpler fact can be handled much more directly with disaggregation regression, which is precisely what I have been working on for five years.
 
 
 
