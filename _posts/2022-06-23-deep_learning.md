@@ -21,7 +21,7 @@ I've tried to be careful with the title wording.
 
 Why - I'll give my reasons, it's not just a hunch.
 
-deep learning - Deep neural nets but also other methods. Anything where the learning involves a transformation of a transformation of a transformation of a ... of the data. But important not including other machine learning methods which I use all the time because they often improve predictive accuracy in my work.
+deep learning - Deep neural nets but also other methods. Anything where the learning involves a transformation of a transformation of a transformation of a ... of the data. But importantly not including other machine learning methods which I use all the time because they often improve predictive accuracy in my work.
 
 probably - an uncertain forecast
 
