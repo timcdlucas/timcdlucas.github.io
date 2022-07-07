@@ -1,6 +1,7 @@
 --------------------
+
 How people trick themselves into thinking they can predict the stock market
-========================
+================================================================================
 
 I keep accumulating ideas of things to make into YouTube videos or long careful tutorials or whatever else.
 And then I never do them.
