@@ -44,7 +44,7 @@ I currently supervise these people in some capacity.
 
 ### PhD students
 
-Hayley Smith. [@96HayleySmith](https://twitter.com/96HayleySmith). Combining neural networks and survival models and working out how to fairly compare machine learning and statistical models.
+Hayley Smith. [@96HayleySmith](https://twitter.com/96HayleySmith). Combining neural networks and survival models and working out how to [fairly compare](https://diagnprognres.biomedcentral.com/articles/10.1186/s41512-022-00124-y] machine learning and statistical models.
 
 Enzo Cerullo. [@enzo_cerullo](https://twitter.com/enzo_cerullo). Methods for assessing test accuracy in the absence of a gold standard [pdf](https://arxiv.org/abs/2103.06858). Meta-analyses. [Scholar](https://scholar.google.com/citations?user=OFlV97sAAAAJ&hl=en&oi=ao)
 
