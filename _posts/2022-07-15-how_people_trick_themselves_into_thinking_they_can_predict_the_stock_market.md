@@ -61,9 +61,9 @@ Stock prices change through time, but generally not hugely.
 Other ways of saying this is that the stock price today depends a lot on the stock price yesterday, or that the stock price is an autoregressive process.
 
 So for a stock that has changed price a lot over a long period, such as Tesla that is now worth much more than it was 10 years ago, a model that predicts tomorrows price as being the same as todays price, will have very high apparent "predictive ability".
-When the price went from \$1 to \$1.1, you predict \$1. 
-When the price went from \$100 to \$110, you predict \$100. 
-The correlation between your predictions (\$1 and \$100) and the truth (\$1.1 and \$110) is high.
+When the price went from $\$$1 to $\$$1.1, you predict $\$$1. 
+When the price went from $\$$100 to $\$$110, you predict $\$$100. 
+The correlation between your predictions ($\$$1 and $\$$100) and the truth ($\$$1.1 and $\$$110) is high.
 
 
 
