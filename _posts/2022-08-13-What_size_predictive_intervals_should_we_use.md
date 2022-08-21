@@ -15,7 +15,7 @@ I'm fairly convinced that not all prediction intervals are created equal.
 A 40% prediction interval (assuming it's not presented alongside other intervals) is an odd metric that represents a high density interval that the true value probably *isn't* in (&lt;50% chance). 
 
 Given that, here are some things to consider when chosing an interval.
-I'll use the binary decision of 80% versus 95% just to illustrate things.c
+I'll use the binary decision of 80% versus 95% just to illustrate things.
 And I will ignore the fact that of course we often want to use the full distribution rather than summarise a distribution as a single interval; there are so many cases where communicating a full distribution is not feasible.
 If you can use 2 or 3 intervals, or density plots of the full distribution, do that; if you must summarise a distribution as a single interval, perhaps consider these points.
 
@@ -25,7 +25,8 @@ How do policy makers interpret intervals?
 
 This point is probably the most subjective, but possibly the most important. 
 Despite our best efforts, I think most people, even trained scientists, think of a 95% prediction interval as "the true value is almost certainly in this interval".
-Obviously, this isn't true, 1 in 20 95% prediction intervals will not cover the true value.
+Obviously, this isn't true.
+1 in 20 95% prediction intervals will not cover the true value.
 Furthermore, we are talking about prediction intervals, and we will almost certainly be making hundreds of predictions.
 Therefore, we must expect many of our prediction intervals not to cover their respective true values.
 
@@ -34,6 +35,7 @@ I don't think people look at an 80% prediction interval and think "the true valu
 It's more like a "best guess" interval.
 Perhaps this is more useful.
 But to reiterate, this is a very subjective point and I have no hard evidence for this point.
+The counter argument is that perhaps people can't switch between intervals easily, and that therefore we should somehow settle on a single interval; given it's history, 95% would be the clear winner in this case.
 
 
 Wide and confident or thin and unsure?
@@ -51,9 +53,9 @@ On the upper end you have enough time to do anything really; start a new career,
 
 Imagine instead you were given an 80% interval of 3 to 6 years.
 This "probably true" interval is quite useful.
-You have some time, you don't have preioritise only 3 or 4 things to do before you die.
+You have some time, you don't have prioritise only 3 or 4 things to do before you die.
 But starting a new career may well be a waste of time.
-Of course, all the survival times that were in the 95% interval are still possible, but this "probably true" focusses on a reasonable range of very likely values.
+Of course, all the survival times that were in the 95% interval are still possible, but this "probably true" interval focusses on a reasonable range of very likely values.
 
 Relatedly, prediction intervals typically get wider faster as you increase the probability interval (look at the shape of a normal distribution for intuition). 
 In a normal distribution, a 95% interval is more than 53% bigger than an 80% interval.
@@ -82,7 +84,7 @@ We are guiding the user as to when the model does and does not work and again th
 Confident but badly estimated coverage or unsure but well estimated coverage?
 ------------------------------------------------------------------------------
 
-My last point is that estimating the coverate of a prediction is easier when the interval is smaller.
+My last point is that estimating the calibration of a model is easier when the interval is smaller.
 In the same way as having few cases vs controls makes our effective sample size small, having large prediction intervals gives us fewer data points where the prediction intervals do not cover the true value.
 For example, if our dataset contains 200 datapoints, a well calibrated model will have around 10 datapoints where the 95% prediction interval does not cover the true value.
 In contrast, the 80% prediction interval would give us 40 failures, a much more reasonable sample size.
@@ -94,7 +96,12 @@ So we're pretty sure the coverage for the 80% prediction interval is ok.
 
 
 
+Conclusions
+------------
 
+So in conclusion, perhaps we should think about what intervals we use a bit more.
+Different considerations will apply in different situations, and almost certainly there are different considerations for prediction intervals and confidence/credible intervals.
+As in the intro, we should avoid summarise full distributions when we can, but often we can't.
 
 
 
