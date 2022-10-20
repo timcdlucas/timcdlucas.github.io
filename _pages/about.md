@@ -24,11 +24,24 @@ Previously, I worked as a Research Fellow at Imperial College.
 Before that I worked with Deirdre Hollingsworth and the Malaria Atlas Project at the Big Data Institute, University of Oxford on neglected tropical diseases and malaria.
 
 
+Current Vacancies/Opportunities
+--------------------------------
+
+
+Two PhD projects I'm supervisor on are [now open for applicants.](
+https://le.ac.uk/study/research-degrees/funded-opportunities/wellcome-trust)
+
+[Multi-omic approaches to understand the medium and long-term effects of COVID-19 and identify novel therapeutic opportunities (1st supervisor).](https://le.ac.uk/-/media/uol/docs/study/funded-ops/2023-projects/genomics-wellcome-trust/projectprofiles2023-t146.docx)
+
+[Applying machine learning to find clinical and genetic predictors for radiotherapy side effects (2nd supervisor).](https://le.ac.uk/-/media/uol/docs/study/funded-ops/2023-projects/genomics-wellcome-trust/projectprofiles2023-t154.docx)
+
+
+
+
 If you are a student looking for opportunities such as masters or PhD projects please email to say hello.
 Or you can say hello on twitter [@timcdlucas](www.twitter.com/timcdlucas) or [@StatsForBios](www.twitter.com/statsforbios).
 There are studentships or [pre-doctoral fellowships](https://www.google.com/search?q=nihr+predoctoral+fellowship&rlz=1C1GCEA_enGB962GB962&oq=&sourceid=chrome&ie=UTF-8) we could develop a project for.
-I don't currently have funding for any PhD students.
-I will always announce them on twitter and I will try to add them here.
+
 I haven't yet supervised a student through an entire PhD. 
 However, my belief is that the primary aim in a PhD is simply to be happy and healthy, now and in the future.
 The secondary aim is to graduate.
