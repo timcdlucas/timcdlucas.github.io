@@ -27,7 +27,7 @@ Before that I worked with Deirdre Hollingsworth and the Malaria Atlas Project at
 Current Vacancies/Opportunities
 --------------------------------
 
-I am hiring a software developer with expertise in R shiny. We want to make a shiny app that makes disaggregation regression easier to use. [Job advert](https://jobs.le.ac.uk/vacancies/7677/software-developer.html). I will also be hiring a post-doc to work on disaggregation regression methods. The advert will be up in the coming weeks. Feel free to email me about either of these positions.
+I am hiring a software developer with expertise in R shiny. We want to make a shiny app that makes disaggregation regression easier to use. [Job advert](https://jobs.le.ac.uk/vacancies/7677/software-developer.html). I am also hiring a post-doc to work on disaggregation regression methods. [Job advert](https://jobs.le.ac.uk/vacancies/7685/research-associate.html). Please email for a chat if you're interested.
 
 If you are a student looking for opportunities such as masters or PhD projects please email to say hello.
 Or you can say hello on twitter [@timcdlucas](www.twitter.com/timcdlucas) or [@StatsForBios](www.twitter.com/statsforbios).
