@@ -27,15 +27,13 @@ Before that I worked with Deirdre Hollingsworth and the Malaria Atlas Project at
 Current Vacancies/Opportunities
 --------------------------------
 
-I am hiring a software developer with expertise in R shiny. We want to make a shiny app that makes disaggregation regression easier to use. [Job advert](https://jobs.le.ac.uk/vacancies/7677/software-developer.html). I am also hiring a post-doc to work on disaggregation regression methods. [Job advert](https://jobs.le.ac.uk/vacancies/7685/research-associate.html). Please email for a chat if you're interested.
-
 If you are a student looking for opportunities such as masters or PhD projects please email to say hello.
 Or you can say hello on twitter [@timcdlucas](www.twitter.com/timcdlucas) or [@StatsForBios](www.twitter.com/statsforbios).
 There are studentships or [pre-doctoral fellowships](https://www.nihr.ac.uk/explore-nihr/academy-programmes/fellowship-programme.htm#one) we could develop a project for.
 
-However, my belief is that the primary aim in a PhD is simply to be happy and healthy, now and in the future.
+My belief is that the primary aim in a PhD is simply to be happy and healthy, now and in the future.
 The secondary aim is to graduate.
-Gaining skills, doing exciting science and publishing papers are subsidiary to the above.
+Gaining skills, doing exciting science and publishing papers typically contribute to the above.
 I want to be a thoroughly supportive supervisor no matter your strengths, weaknesses and background.
 
 
@@ -51,7 +49,7 @@ Hayley Smith. [@96HayleySmith](https://twitter.com/96HayleySmith). Combining neu
 
 Enzo Cerullo. [@enzo_cerullo](https://twitter.com/enzo_cerullo). Methods for assessing test accuracy in the absence of a gold standard [pdf](https://arxiv.org/abs/2103.06858). Meta-analyses. [Scholar](https://scholar.google.com/citations?user=OFlV97sAAAAJ&hl=en&oi=ao)
 
-Nidhi Shukla. Machine learning and statistical methods for handling resolution mismatch in air pollution.
+Nidhi Shukla. [@nidhienv01](https://twitter.com/nidhienv01). Machine learning and statistical methods for handling resolution mismatch in air pollution. 
 
 ### Post Docs
 
