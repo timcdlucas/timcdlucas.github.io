@@ -43,17 +43,21 @@ Lab Group
 
 I currently supervise these people in some capacity.
 
+### Post Docs
+
+Simon Smart. [@smartspuds](https://twitter.com/smartspuds). A shiny app for disaggregation regression. 
+
+Hannah Worboys. [@HannahWorboys41](https://twitter.com/HannahWorboys41). 0.5fte post doc planning evaluation studies for the [P-STEP app](https://le.ac.uk/cehs/research/personalised-space-technology-exercise-platform). 0.5fte PhD student but not supervised by me. How are transplants and mortality used when evaluating [quality of life](https://bmjopen.bmj.com/content/11/8/e048179.full).
+
+
 ### PhD students
 
-Hayley Smith. [@96HayleySmith](https://twitter.com/96HayleySmith). Combining neural networks and survival models and working out how to [fairly compare](https://diagnprognres.biomedcentral.com/articles/10.1186/s41512-022-00124-y) machine learning and statistical models.
+Nidhi Shukla. [@nidhienv01](https://twitter.com/nidhienv01). Machine learning and statistical methods for handling resolution mismatch in air pollution. [Scholar](https://scholar.google.com/citations?hl=en&user=wOcmZkgAAAAJ) 
+
+Hayley Smith. [@96HayleySmith](https://twitter.com/96HayleySmith). Combining neural networks and survival models and working out how to [fairly compare](https://diagnprognres.biomedcentral.com/articles/10.1186/s41512-022-00124-y) machine learning and statistical models. [Scholar](https://scholar.google.com/citations?user=OPi4pSQAAAAJ&hl=en&oi=ao)
 
 Enzo Cerullo. [@enzo_cerullo](https://twitter.com/enzo_cerullo). Methods for assessing test accuracy in the absence of a gold standard [pdf](https://arxiv.org/abs/2103.06858). Meta-analyses. [Scholar](https://scholar.google.com/citations?user=OFlV97sAAAAJ&hl=en&oi=ao)
 
-Nidhi Shukla. [@nidhienv01](https://twitter.com/nidhienv01). Machine learning and statistical methods for handling resolution mismatch in air pollution. 
-
-### Post Docs
-
-Hannah Worboys. [@HannahWorboys41](https://twitter.com/HannahWorboys41). 0.5fte post doc planning evaluation studies for the [P-STEP app](https://le.ac.uk/cehs/research/personalised-space-technology-exercise-platform). 0.5fte PhD student but not supervised by me. How are transplants and mortality used when evaluating [quality of life](https://bmjopen.bmj.com/content/11/8/e048179.full).
 
 ### Pre docs
 
