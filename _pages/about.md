@@ -11,7 +11,7 @@ redirect_from:
 I am a lecturer in the [Dept. of Health Sciences](https://le.ac.uk/health-sciences) at the University of Leicester.
 Please feel free to email me to discuss stats, modelling, R, job opportunities or anything else.
 My address is tim.lucas --- at --- le.ac.uk.
-
+Or you can say hello on twitter [@timcdlucas](www.twitter.com/timcdlucas) or [@StatsForBios](www.twitter.com/statsforbios) or bluesky [@statsforbios.bsky.social](https://bsky.app/profile/statsforbios.bsky.social).
 
 My interests encompass statistical methods and mathematical models for studying disease.
 In particular I'm interested in studying methods that account for multiple temporal or spatial scales.
@@ -28,7 +28,6 @@ Current Vacancies/Opportunities
 --------------------------------
 
 If you are a student looking for opportunities such as masters or PhD projects please email to say hello.
-Or you can say hello on twitter [@timcdlucas](www.twitter.com/timcdlucas) or [@StatsForBios](www.twitter.com/statsforbios).
 There are studentships or [pre-doctoral fellowships](https://www.nihr.ac.uk/explore-nihr/academy-programmes/fellowship-programme.htm#one) we could develop a project for.
 
 My belief is that the primary aim in a PhD is simply to be happy and healthy, now and in the future.
@@ -54,14 +53,25 @@ Hannah Worboys. [@HannahWorboys41](https://twitter.com/HannahWorboys41). 0.5fte 
 
 Nidhi Shukla. [@nidhienv01](https://twitter.com/nidhienv01). Machine learning and statistical methods for handling resolution mismatch in air pollution. [Scholar](https://scholar.google.com/citations?hl=en&user=wOcmZkgAAAAJ) 
 
-Hayley Smith. [@96HayleySmith](https://twitter.com/96HayleySmith). Combining neural networks and survival models and working out how to [fairly compare](https://diagnprognres.biomedcentral.com/articles/10.1186/s41512-022-00124-y) machine learning and statistical models. [Scholar](https://scholar.google.com/citations?user=OPi4pSQAAAAJ&hl=en&oi=ao)
+Flo Goemans. Using omics data to predict and understand long COVID outcomes.
 
 Enzo Cerullo. [@enzo_cerullo](https://twitter.com/enzo_cerullo). Methods for assessing test accuracy in the absence of a gold standard [pdf](https://arxiv.org/abs/2103.06858). Meta-analyses. [Scholar](https://scholar.google.com/citations?user=OFlV97sAAAAJ&hl=en&oi=ao)
+
+Abeer Al Japany. Machine learning methods for predicting radiotherapy side effects. 
 
 
 ### Pre docs
 
-Hadiqa Tahir. NIHR predoctoral fellow. Statistical methods for understanding the relationship between green space, pollen exposure and asthma.
+Hadiqa Tahir. [@Hadiqa_T](https://twitter.com/Hadiqa_T). NIHR predoctoral fellow. Statistical methods for understanding the relationship between green space, pollen exposure and asthma.
+
+Sylvain Matingou. NIHR predoctoral fellow. Statistical methods for combining human movement, air pollution and health data.
+
+Amber Vayani. NIHR predoctoral fellow. Quantifying the role of air conditioning in protecting against adverse health outcomes in extreme heat.
+
+
+
+### Lab Alumni
+Hayley Smith. [@96HayleySmith](https://twitter.com/96HayleySmith). Combining neural networks and survival models and working out how to [fairly compare](https://diagnprognres.biomedcentral.com/articles/10.1186/s41512-022-00124-y) machine learning and statistical models. [Scholar](https://scholar.google.com/citations?user=OPi4pSQAAAAJ&hl=en&oi=ao)
 
 
 <br>
