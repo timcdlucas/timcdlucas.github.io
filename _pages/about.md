@@ -46,7 +46,7 @@ I currently supervise these people in some capacity.
 
 Simon Smart. [@smartspuds](https://twitter.com/smartspuds). A shiny app for disaggregation regression. 
 
-Hannah Worboys. [@HannahWorboys41](https://twitter.com/HannahWorboys41). 0.5fte post doc planning evaluation studies for the [P-STEP app](https://le.ac.uk/cehs/research/personalised-space-technology-exercise-platform). 0.5fte PhD student but not supervised by me. How are transplants and mortality used when evaluating [quality of life](https://bmjopen.bmj.com/content/11/8/e048179.full).
+Olukemi Olowofoyeku. Developing more predictive disaggregation regression methods. Disease mapping including Lassa Fever.
 
 
 ### PhD students
@@ -73,6 +73,7 @@ Amber Vayani. NIHR predoctoral fellow. Quantifying the role of air conditioning 
 ### Lab Alumni
 Hayley Smith. [@96HayleySmith](https://twitter.com/96HayleySmith). Combining neural networks and survival models and working out how to [fairly compare](https://diagnprognres.biomedcentral.com/articles/10.1186/s41512-022-00124-y) machine learning and statistical models. [Scholar](https://scholar.google.com/citations?user=OPi4pSQAAAAJ&hl=en&oi=ao)
 
+Hannah Worboys. [@HannahWorboys41](https://twitter.com/HannahWorboys41). Post doc planning evaluation studies for the [P-STEP app](https://le.ac.uk/cehs/research/personalised-space-technology-exercise-platform). PhD work on [quality of life](https://bmjopen.bmj.com/content/11/8/e048179.full).
 
 <br>
 <br>
