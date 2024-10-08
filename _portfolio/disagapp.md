@@ -1,6 +1,6 @@
 ---
 title: "disagapp"
-excerpt: "R package for accessing data from the Malaria Atlas Project<br/><br/><img src='/images/app_screenshots_for_tim6.png'>"
+excerpt: "A shiny app for disaggregation regression<br/><br/><img src='/images/app_screenshots_for_tim6.png'>"
 collection: portfolio
 ---
 
