@@ -19,7 +19,6 @@ For example, disease progression or diagnosis is typically quite a slow process,
 Depending on our movement patterns, we can have very different exposures from one minute to the next.
 
 I have a continuing interest in infectious disease models and statistical methods for ecology.
-Recently this has involved developing models of contact tracing to help guide COVID-19 policy.
 Previously, I worked as a Research Fellow at Imperial College.
 Before that I worked with Deirdre Hollingsworth and the Malaria Atlas Project at the Big Data Institute, University of Oxford on neglected tropical diseases and malaria.
 
@@ -44,7 +43,7 @@ I currently supervise these people in some capacity.
 
 ### Post Docs
 
-Simon Smart. [@smartspuds](https://twitter.com/smartspuds). A shiny app for disaggregation regression. 
+Simon Smart. [@simonsmart.bsky.social]([https://twitter.com/smartspuds](https://bsky.app/profile/simonsmart.bsky.social)). A shiny app for disaggregation regression. 
 
 Olukemi Olowofoyeku. Developing more predictive disaggregation regression methods. Disease mapping including Lassa Fever.
 
@@ -53,7 +52,7 @@ Olukemi Olowofoyeku. Developing more predictive disaggregation regression method
 
 Nidhi Shukla. [@nidhienv01](https://twitter.com/nidhienv01). Machine learning and statistical methods for handling resolution mismatch in air pollution. [Scholar](https://scholar.google.com/citations?hl=en&user=wOcmZkgAAAAJ) 
 
-Flo Goemans. Using omics data to predict and understand long COVID outcomes.
+Flo Goemans. Using [omics data](https://publications.ersnet.org/content/erjor/early/2025/03/20/2312054100200-2025?implicit-login=true%26862) to predict and understand long COVID outcomes. [Scholar](https://scholar.google.com/citations?user=GLGTr94AAAAJ&hl=en&oi=ao)
 
 Enzo Cerullo. [@enzo_cerullo](https://twitter.com/enzo_cerullo). Methods for assessing test accuracy in the absence of a gold standard [pdf](https://arxiv.org/abs/2103.06858). Meta-analyses. [Scholar](https://scholar.google.com/citations?user=OFlV97sAAAAJ&hl=en&oi=ao)
 
@@ -63,18 +62,19 @@ Hadiqa Tahir. [@Hadiqa_T](https://twitter.com/Hadiqa_T). Statistical methods for
 
 Sylvain Matingou. Statistical methods for combining human movement, air pollution and health data.
 
+Amber Vayani. Understanding the relationship between indoor environment and health in children.
+
 
 ### Pre docs
 
-Amber Vayani. NIHR predoctoral fellow. Quantifying the role of air conditioning in protecting against adverse health outcomes in extreme heat.
-
+Samana Bano. NIHR predoctoral fellow. New methods and software for disease mapping.
 
 
 ### Lab Alumni
 
 Hayley Smith. [@96HayleySmith](https://twitter.com/96HayleySmith). Combining neural networks and survival models and working out how to [fairly compare](https://diagnprognres.biomedcentral.com/articles/10.1186/s41512-022-00124-y) machine learning and statistical models. [Scholar](https://scholar.google.com/citations?user=OPi4pSQAAAAJ&hl=en&oi=ao)
 
-Hannah Worboys. [@HannahWorboys41](https://twitter.com/HannahWorboys41). Post doc planning evaluation studies for the [P-STEP app](https://le.ac.uk/cehs/research/personalised-space-technology-exercise-platform). PhD work on [quality of life](https://bmjopen.bmj.com/content/11/8/e048179.full).
+Hannah Worboys. [@HannahWorboys41](https://twitter.com/HannahWorboys41). Post doc planning evaluation studies for the [P-STEP app](https://link.springer.com/article/10.1186/s40814-024-01546-9). PhD work on [quality of life](https://bmjopen.bmj.com/content/11/8/e048179.full).
 
 <br>
 <br>
