@@ -8,15 +8,17 @@ redirect_from:
   - /about.html
 ---
 
-I am a lecturer in the [Dept. of Population Health Sciences](https://le.ac.uk/health-sciences) at the University of Leicester.
+I am an Associate Professor in the School of Medical Health Sciences at the University of Leicester.
+I am co-lead of the [Biostatistics research group](https://le.ac.uk/biostatistics) here.
 Please feel free to email me to discuss stats, modelling, R, job opportunities or anything else.
 My address is tim.lucas --- at --- le.ac.uk.
 Or you can say hello on bluesky [@statsforbios.bsky.social](https://bsky.app/profile/statsforbios.bsky.social).
 
 My interests encompass statistical methods and mathematical models for studying disease.
-In particular I'm interested in studying methods that account for multiple temporal or spatial scales.
-For example, disease progression or diagnosis is typically quite a slow process, but we are exposed to environmental factors such as air pollution every second.
-Depending on our movement patterns, we can have very different exposures from one minute to the next.
+In particular I'm interested in methods for environmentally diven diseases, particularly those that account for multiple temporal or spatial scales.
+For example, we might have disease counts aggregated in time or space, but have access to higher resolution covariate data.
+Additionally, depending on our movement patterns, we can have very different exposures from one minute to the next; a fact that is rarely captured in models.
+I use these methods in applied studies of  environmental drivers of non-communicable diseases (e.g. asthma), vector-borne diseases and zoonotic diseases.
 
 I have a continuing interest in infectious disease models and statistical methods for ecology.
 Previously, I worked as a Research Fellow at Imperial College.
@@ -43,7 +45,7 @@ I currently supervise these people in some capacity.
 
 ### Post Docs
 
-Simon Smart. [@simonsmart.bsky.social]([https://twitter.com/smartspuds](https://bsky.app/profile/simonsmart.bsky.social)). A shiny app for disaggregation regression. 
+Simon Smart. [@simonsmart.bsky.social](https://bsky.app/profile/simonsmart.bsky.social). A shiny app for disaggregation regression. 
 
 Olukemi Olowofoyeku. Developing more predictive disaggregation regression methods. Disease mapping including Lassa Fever.
 
@@ -58,11 +60,13 @@ Enzo Cerullo. [@enzo_cerullo](https://twitter.com/enzo_cerullo). Methods for ass
 
 Abeer Al Japany. Machine learning methods for predicting radiotherapy side effects. 
 
-Hadiqa Tahir. [@Hadiqa_T](https://twitter.com/Hadiqa_T). Statistical methods for understanding the relationship between human movement, air pollution, green space and health outcomes.
+Hadiqa Tahir. [@hadiqa-tahir.bsky.social](https://bsky.app/profile/hadiqa-tahir.bsky.social). Statistical methods for understanding the relationship between human movement, air pollution, green space and health outcomes.
 
 Sylvain Matingou. Statistical methods for combining human movement, air pollution and health data.
 
 Amber Vayani. Understanding the relationship between indoor environment and health in children.
+
+Carolina Molina Tabares. Developing eDNA sampling for Aedes mosquitos. [Scholar](https://scholar.google.com/citations?user=zmwfYX8AAAAJ&hl=en&oi=ao)
 
 
 ### Pre docs
