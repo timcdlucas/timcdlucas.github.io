@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am an Associate Professor in the School of Medical Health Sciences at the University of Leicester.
+I am an Associate Professor in the School of Medical Sciences at the University of Leicester.
 I am co-lead of the [Biostatistics research group](https://le.ac.uk/biostatistics) here.
 Please feel free to email me to discuss stats, modelling, R, job opportunities or anything else.
 My address is tim.lucas --- at --- le.ac.uk.
