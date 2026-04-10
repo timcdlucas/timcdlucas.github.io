@@ -11,5 +11,5 @@ Disagapp is an application written in R that can be used to perform disaggregati
 
 Disagapp was built using the {shinyscholar} template which was itself forked from {wallace} v2.0.5.
 
-[See the github page here]([https://github.com/malaria-atlas-project/malariaAtlas](https://github.com/simon-smart88/disagapp))
+[See the github page here](https://github.com/simon-smart88/disagapp)
 
