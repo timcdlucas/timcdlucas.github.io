@@ -43,22 +43,14 @@ Lab Group
 
 I currently supervise these people in some capacity.
 
-### Post Docs
-
-Simon Smart. [@simonsmart.bsky.social](https://bsky.app/profile/simonsmart.bsky.social). A shiny app for disaggregation regression. 
-
-Olukemi Olowofoyeku. Developing more predictive disaggregation regression methods. Disease mapping including Lassa Fever.
-
-
 ### PhD students
 
-Nidhi Shukla. [@nidhienv01](https://twitter.com/nidhienv01). Machine learning and statistical methods for handling resolution mismatch in air pollution. [Scholar](https://scholar.google.com/citations?hl=en&user=wOcmZkgAAAAJ) 
 
 Flo Goemans. Using [omics data](https://publications.ersnet.org/content/erjor/early/2025/03/20/2312054100200-2025?implicit-login=true%26862) to predict and understand long COVID outcomes. [Scholar](https://scholar.google.com/citations?user=GLGTr94AAAAJ&hl=en&oi=ao)
 
 Enzo Cerullo. [@enzo_cerullo](https://twitter.com/enzo_cerullo). Methods for assessing test accuracy in the absence of a gold standard [pdf](https://arxiv.org/abs/2103.06858). Meta-analyses. [Scholar](https://scholar.google.com/citations?user=OFlV97sAAAAJ&hl=en&oi=ao)
 
-Abeer Al Japany. Machine learning methods for predicting radiotherapy side effects. 
+Abeer Al Japany. Machine learning methods for predicting [radiotherapy side effects](https://www.sciencedirect.com/science/article/pii/S0360301626042008). 
 
 Hadiqa Tahir. [@hadiqa-tahir.bsky.social](https://bsky.app/profile/hadiqa-tahir.bsky.social). Statistical methods for understanding the relationship between human movement, air pollution, green space and health outcomes.
 
@@ -75,6 +67,12 @@ Samana Bano. NIHR predoctoral fellow. New methods and software for disease mappi
 
 
 ### Lab Alumni
+
+Nidhi Shukla. [@nidhienv01](https://twitter.com/nidhienv01). Machine learning and statistical methods for handling resolution mismatch in air pollution. [Scholar](https://scholar.google.com/citations?hl=en&user=wOcmZkgAAAAJ) 
+
+Simon Smart. [@simonsmart.bsky.social](https://bsky.app/profile/simonsmart.bsky.social). A shiny app for disaggregation regression. 
+
+Olukemi Olowofoyeku. Developing more predictive disaggregation regression methods. Disease mapping including Lassa Fever.
 
 Hayley Smith. [@96HayleySmith](https://twitter.com/96HayleySmith). Combining neural networks and survival models and working out how to [fairly compare](https://diagnprognres.biomedcentral.com/articles/10.1186/s41512-022-00124-y) machine learning and statistical models. [Scholar](https://scholar.google.com/citations?user=OPi4pSQAAAAJ&hl=en&oi=ao)
 
