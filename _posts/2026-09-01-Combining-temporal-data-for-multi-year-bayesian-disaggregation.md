@@ -215,49 +215,38 @@ file.
 
 
 ### Step 1 : Read the dataset
+    
+    madagascar <- st_read(file.path(data_dir, "madagascar_districts.gpkg"), quiet = TRUE)
+    
+    covariate_stack   <- rast(file.path(data_dir, "real_covariates.tif"))
+    population_raster <- rast(file.path(data_dir, "real_population.tif"))
+    
+    case_counts <- read.csv(file.path(data_dir, "simulated_case_counts.csv")) |>
+      mutate(district_id = as.character(district_id))
+    
+    true_parameters <- read.csv(file.path(data_dir, "true_parameters.csv"))
+    true_parameters   # ground truth used to simulate cases - compare the
+    
+               parameter true_value
+        1      intercept  -10.88137
+        2   beta_temp_wc    0.35000
+        3 beta_precip_wc   -0.20000
+        4     beta_year1    0.40000
+        5     beta_year2   -0.20000
+        6     beta_year3    0.15000
+        7       field_sd    0.40000
+        8         iid_sd    0.15000
 
-:::: cell
-``` {.r .cell-code}
-madagascar <- st_read(file.path(data_dir, "madagascar_districts.gpkg"), quiet = TRUE)
-
-covariate_stack   <- rast(file.path(data_dir, "real_covariates.tif"))
-population_raster <- rast(file.path(data_dir, "real_population.tif"))
-
-case_counts <- read.csv(file.path(data_dir, "simulated_case_counts.csv")) |>
-  mutate(district_id = as.character(district_id))
-
-true_parameters <- read.csv(file.path(data_dir, "true_parameters.csv"))
-true_parameters   # ground truth used to simulate cases - compare the
-```
-
-::: {.cell-output .cell-output-stdout}
-           parameter true_value
-    1      intercept  -10.88137
-    2   beta_temp_wc    0.35000
-    3 beta_precip_wc   -0.20000
-    4     beta_year1    0.40000
-    5     beta_year2   -0.20000
-    6     beta_year3    0.15000
-    7       field_sd    0.40000
-    8         iid_sd    0.15000
-:::
-
-``` {.r .cell-code}
 # fitted model against these at the end
-```
-::::
 
 ### Step 2: pick the window and build the shapes
+    
+    years <- 2001:2003
+    
+    shapes_2001 <- madagascar |> left_join(filter(case_counts, Year == years[1]), by = "district_id")
+    shapes_2002 <- madagascar |> left_join(filter(case_counts, Year == years[2]), by = "district_id")
+    shapes_2003 <- madagascar |> left_join(filter(case_counts, Year == years[3]), by = "district_id")
 
-::: cell
-``` {.r .cell-code}
-years <- 2001:2003
-
-shapes_2001 <- madagascar |> left_join(filter(case_counts, Year == years[1]), by = "district_id")
-shapes_2002 <- madagascar |> left_join(filter(case_counts, Year == years[2]), by = "district_id")
-shapes_2003 <- madagascar |> left_join(filter(case_counts, Year == years[3]), by = "district_id")
-```
-:::
 
 ### Step 3: covariate stack per year
 
@@ -266,19 +255,16 @@ precip_wc_2001, ..., temp_wc_2006, precip_wc_2006.
 
 So each year below pulls out its OWN pair of layers by name instead of
 reusing the same values for every year.
-
-::: cell
-``` {.r .cell-code}
-cov_stack_2001 <- covariate_stack[[c("temp_wc_2001", "precip_wc_2001")]]
-names(cov_stack_2001) <- c("temp_wc", "precip_wc")
-
-cov_stack_2002 <- covariate_stack[[c("temp_wc_2002", "precip_wc_2002")]]
-names(cov_stack_2002) <- c("temp_wc", "precip_wc")
-
-cov_stack_2003 <- covariate_stack[[c("temp_wc_2003", "precip_wc_2003")]]
-names(cov_stack_2003) <- c("temp_wc", "precip_wc")
-```
-:::
+    
+    cov_stack_2001 <- covariate_stack[[c("temp_wc_2001", "precip_wc_2001")]]
+    names(cov_stack_2001) <- c("temp_wc", "precip_wc")
+    
+    cov_stack_2002 <- covariate_stack[[c("temp_wc_2002", "precip_wc_2002")]]
+    names(cov_stack_2002) <- c("temp_wc", "precip_wc")
+    
+    cov_stack_2003 <- covariate_stack[[c("temp_wc_2003", "precip_wc_2003")]]
+    names(cov_stack_2003) <- c("temp_wc", "precip_wc")
+    
 
 ### Step 4: prepare data for each year
 
@@ -292,64 +278,43 @@ region.
 
 The details for what these parameters mean can be found in the inla
 tutorials for example.
+    
+    mesh_args_mdg <- list(max.edge = c(0.7, 8), cutoff = 0.05, offset = c(1, 2))
+    
+    dis_2001 <- prepare_data(
+      polygon_shapefile  = shapes_2001,
+      covariate_rasters  = cov_stack_2001,
+      aggregation_raster = population_raster,
+      mesh_args          = mesh_args_mdg,
+      id_var             = "district_id",
+      response_var       = "cases",
+      na_action          = TRUE
+    )
 
-::::::: cell
-``` {.r .cell-code}
-mesh_args_mdg <- list(max.edge = c(0.7, 8), cutoff = 0.05, offset = c(1, 2))
 
-dis_2001 <- prepare_data(
-  polygon_shapefile  = shapes_2001,
-  covariate_rasters  = cov_stack_2001,
-  aggregation_raster = population_raster,
-  mesh_args          = mesh_args_mdg,
-  id_var             = "district_id",
-  response_var       = "cases",
-  na_action          = TRUE
-)
-```
+    
+    dis_2002 <- prepare_data(
+      polygon_shapefile  = shapes_2002,
+      covariate_rasters  = cov_stack_2002,
+      aggregation_raster = population_raster,
+      mesh_args          = mesh_args_mdg,
+      id_var             = "district_id",
+      response_var       = "cases",
+      na_action          = TRUE
+    )
 
-::: {.cell-output .cell-output-stderr}
-    Warning: [rast] CRS do not match
-:::
+    
+    dis_2003 <- prepare_data(
+      polygon_shapefile  = shapes_2003,
+      covariate_rasters  = cov_stack_2003,
+      aggregation_raster = population_raster,
+      mesh_args          = mesh_args_mdg,
+      id_var             = "district_id",
+      response_var       = "cases",
+      na_action          = TRUE
+    )
 
-::: {.cell-output .cell-output-stderr}
-    Warning: [extract] transforming vector data to the CRS of the raster
-:::
 
-``` {.r .cell-code}
-dis_2002 <- prepare_data(
-  polygon_shapefile  = shapes_2002,
-  covariate_rasters  = cov_stack_2002,
-  aggregation_raster = population_raster,
-  mesh_args          = mesh_args_mdg,
-  id_var             = "district_id",
-  response_var       = "cases",
-  na_action          = TRUE
-)
-```
-
-::: {.cell-output .cell-output-stderr}
-    Warning: [rast] CRS do not match
-    Warning: [extract] transforming vector data to the CRS of the raster
-:::
-
-``` {.r .cell-code}
-dis_2003 <- prepare_data(
-  polygon_shapefile  = shapes_2003,
-  covariate_rasters  = cov_stack_2003,
-  aggregation_raster = population_raster,
-  mesh_args          = mesh_args_mdg,
-  id_var             = "district_id",
-  response_var       = "cases",
-  na_action          = TRUE
-)
-```
-
-::: {.cell-output .cell-output-stderr}
-    Warning: [rast] CRS do not match
-    Warning: [extract] transforming vector data to the CRS of the raster
-:::
-:::::::
 
 ### Step 5: The squish: stack the 3 years of data into one disag data object
 
@@ -359,81 +324,68 @@ stacked with a year label attached. We offset `start_end_index`: each
 `prepare_data()` call starts its pixel-row numbering again, so the
 second and third years' indices must be shifted to point to their new
 positions in the combined covariate table.
+    
+    # polygon_data and covariate_data just stack with a year label attached
+    poly_0103 <- bind_rows(
+      transform(dis_2001$polygon_data, year = 2001),
+      transform(dis_2002$polygon_data, year = 2002),
+      transform(dis_2003$polygon_data, year = 2003)
+    )
+    
+    cov_0103 <- bind_rows(
+      transform(dis_2001$covariate_data, year = 2001),
+      transform(dis_2002$covariate_data, year = 2002),
+      transform(dis_2003$covariate_data, year = 2003)
+    )
+    
+    # aggregation_pixels is just concatenated
+    agg_0103 <- c(
+      dis_2001$aggregation_pixels,
+      dis_2002$aggregation_pixels,
+      dis_2003$aggregation_pixels
+    )
+    
+    # start_end_index needs a running offset added, since row indices in
+    # covariate_data restart at 1 for every prepare_data() call
+    se_2001 <- as.matrix(dis_2001$start_end_index)
+    off_2001 <- nrow(dis_2001$covariate_data)
+    
+    se_2002 <- as.matrix(dis_2002$start_end_index) + off_2001
+    off_2002 <- off_2001 + nrow(dis_2002$covariate_data)
+    
+    se_2003 <- as.matrix(dis_2003$start_end_index) + off_2002
+    
+    se_0103 <- rbind(se_2001, se_2002, se_2003)
+    
+    coords_0103 <- rbind(
+      dis_2001$coords_for_fit,
+      dis_2002$coords_for_fit,
+      dis_2003$coords_for_fit
+    )
+    
+    # Build the pooled object, using one year's output as a template for the
+    # mesh and any other slots that don't need to change
+    dis_0103 <- dis_2001
+    dis_0103$polygon_data       <- poly_0103
+    dis_0103$covariate_data     <- cov_0103
+    dis_0103$aggregation_pixels <- agg_0103
+    dis_0103$start_end_index    <- se_0103
+    dis_0103$coords_for_fit     <- coords_0103
 
-::: cell
-``` {.r .cell-code}
-# polygon_data and covariate_data just stack with a year label attached
-poly_0103 <- bind_rows(
-  transform(dis_2001$polygon_data, year = 2001),
-  transform(dis_2002$polygon_data, year = 2002),
-  transform(dis_2003$polygon_data, year = 2003)
-)
-
-cov_0103 <- bind_rows(
-  transform(dis_2001$covariate_data, year = 2001),
-  transform(dis_2002$covariate_data, year = 2002),
-  transform(dis_2003$covariate_data, year = 2003)
-)
-
-# aggregation_pixels is just concatenated
-agg_0103 <- c(
-  dis_2001$aggregation_pixels,
-  dis_2002$aggregation_pixels,
-  dis_2003$aggregation_pixels
-)
-
-# start_end_index needs a running offset added, since row indices in
-# covariate_data restart at 1 for every prepare_data() call
-se_2001 <- as.matrix(dis_2001$start_end_index)
-off_2001 <- nrow(dis_2001$covariate_data)
-
-se_2002 <- as.matrix(dis_2002$start_end_index) + off_2001
-off_2002 <- off_2001 + nrow(dis_2002$covariate_data)
-
-se_2003 <- as.matrix(dis_2003$start_end_index) + off_2002
-
-se_0103 <- rbind(se_2001, se_2002, se_2003)
-
-coords_0103 <- rbind(
-  dis_2001$coords_for_fit,
-  dis_2002$coords_for_fit,
-  dis_2003$coords_for_fit
-)
-
-# Build the pooled object, using one year's output as a template for the
-# mesh and any other slots that don't need to change
-dis_0103 <- dis_2001
-dis_0103$polygon_data       <- poly_0103
-dis_0103$covariate_data     <- cov_0103
-dis_0103$aggregation_pixels <- agg_0103
-dis_0103$start_end_index    <- se_0103
-dis_0103$coords_for_fit     <- coords_0103
-```
-:::
 
 ### step 6: fit the pooled model
+    
+    fit_0103 <- disaggregation::disag_model(
+      data       = dis_0103,
+      iterations = 1000,
+      field      = TRUE,
+      iid        = TRUE,
+      family     = "poisson",
+      link       = "log"
+    )
 
-:::::: cell
-``` {.r .cell-code}
-fit_0103 <- disaggregation::disag_model(
-  data       = dis_0103,
-  iterations = 1000,
-  field      = TRUE,
-  iid        = TRUE,
-  family     = "poisson",
-  link       = "log"
-)
-```
+    summary(fit_0103)
 
-::: {.cell-output .cell-output-stderr}
-    Fitting model. This may be slow.
-:::
-
-``` {.r .cell-code}
-summary(fit_0103)
-```
-
-::: {.cell-output .cell-output-stdout}
     Likelihood function: poisson 
     Link function: log 
     Model parameters:
@@ -451,24 +403,21 @@ summary(fit_0103)
     In sample performance:
           RMSE      MAE   pearson  spearman log_pearson
     1 3.451929 2.594429 0.9107692 0.9018133   0.9027995
-:::
 
-``` {.r .cell-code}
-true_parameters  
-```
+    
+    true_parameters  
+    
+    
+               parameter true_value
+        1      intercept  -10.88137
+        2   beta_temp_wc    0.35000
+        3 beta_precip_wc   -0.20000
+        4     beta_year1    0.40000
+        5     beta_year2   -0.20000
+        6     beta_year3    0.15000
+        7       field_sd    0.40000
+        8         iid_sd    0.15000
 
-::: {.cell-output .cell-output-stdout}
-           parameter true_value
-    1      intercept  -10.88137
-    2   beta_temp_wc    0.35000
-    3 beta_precip_wc   -0.20000
-    4     beta_year1    0.40000
-    5     beta_year2   -0.20000
-    6     beta_year3    0.15000
-    7       field_sd    0.40000
-    8         iid_sd    0.15000
-:::
-::::::
 
 Compare that against three separate single-year fits (`disag_model()` on
 2001, 2002, 2003 individually, no squishing) to see whether pooling
@@ -476,66 +425,43 @@ changes the covariate estimates, tightens their standard errors, or
 shifts the spatial field. This comparison is the actual point of the
 exercise the code above just gets you to a model you can compare
 against.
+    
+    fit_2001 <- disaggregation::disag_model(dis_2001, iterations = 1000, field = TRUE,
+                                            iid = TRUE, family = "poisson", link = "log")
+    
+    
+    fit_2002 <- disaggregation::disag_model(dis_2002, iterations = 1000, field = TRUE,
+                                            iid = TRUE, family = "poisson", link = "log")
+    
+    fit_2003 <- disaggregation::disag_model(dis_2003, iterations = 1000, field = TRUE,
+                                            iid = TRUE, family = "poisson", link = "log")
 
-:::::: cell
-``` {.r .cell-code}
-fit_2001 <- disaggregation::disag_model(dis_2001, iterations = 1000, field = TRUE,
-                                        iid = TRUE, family = "poisson", link = "log")
-```
 
-::: {.cell-output .cell-output-stderr}
-    Fitting model. This may be slow.
-:::
 
-``` {.r .cell-code}
-fit_2002 <- disaggregation::disag_model(dis_2002, iterations = 1000, field = TRUE,
-                                        iid = TRUE, family = "poisson", link = "log")
-```
+We can examine these models.
+    
+    summary(fit_2001)
+    
+        Likelihood function: poisson 
+        Link function: log 
+        Model parameters:
+                             Estimate   Std. Error
+        intercept         -10.8944795   0.09285636
+        temp_wc             0.3834646   0.06309135
+        precip_wc          -0.2368024   0.06681629
+        iideffect_log_tau  13.9161222 147.10593484
+        log_sigma          -2.5340003   0.85083992
+        log_rho             2.1368333   0.73794055
+    
+        Model convergence: 0 (relative convergence (4))
+        Negative log likelihood:  -1807.57628310386 
+    
+        In sample performance:
+             RMSE     MAE   pearson  spearman log_pearson
+        1 2.64717 1.83092 0.9328089 0.9470736   0.9214865
 
-::: {.cell-output .cell-output-stderr}
-    Fitting model. This may be slow.
-:::
+    summary(fit_2002)
 
-``` {.r .cell-code}
-fit_2003 <- disaggregation::disag_model(dis_2003, iterations = 1000, field = TRUE,
-                                        iid = TRUE, family = "poisson", link = "log")
-```
-
-::: {.cell-output .cell-output-stderr}
-    Fitting model. This may be slow.
-:::
-::::::
-
-::::::: cell
-``` {.r .cell-code}
-summary(fit_2001)
-```
-
-::: {.cell-output .cell-output-stdout}
-    Likelihood function: poisson 
-    Link function: log 
-    Model parameters:
-                         Estimate   Std. Error
-    intercept         -10.8944795   0.09285636
-    temp_wc             0.3834646   0.06309135
-    precip_wc          -0.2368024   0.06681629
-    iideffect_log_tau  13.9161222 147.10593484
-    log_sigma          -2.5340003   0.85083992
-    log_rho             2.1368333   0.73794055
-
-    Model convergence: 0 (relative convergence (4))
-    Negative log likelihood:  -1807.57628310386 
-
-    In sample performance:
-         RMSE     MAE   pearson  spearman log_pearson
-    1 2.64717 1.83092 0.9328089 0.9470736   0.9214865
-:::
-
-``` {.r .cell-code}
-summary(fit_2002)
-```
-
-::: {.cell-output .cell-output-stdout}
     Likelihood function: poisson 
     Link function: log 
     Model parameters:
@@ -553,13 +479,9 @@ summary(fit_2002)
     In sample performance:
           RMSE      MAE   pearson  spearman log_pearson
     1 3.136982 2.411554 0.9409313 0.9344445   0.9243826
-:::
 
-``` {.r .cell-code}
-summary(fit_2003)
-```
+    summary(fit_2003)
 
-::: {.cell-output .cell-output-stdout}
     Likelihood function: poisson 
     Link function: log 
     Model parameters:
@@ -577,13 +499,9 @@ summary(fit_2003)
     In sample performance:
          RMSE      MAE   pearson  spearman log_pearson
     1 2.89901 2.240364 0.9423111 0.9185083   0.9319642
-:::
 
-``` {.r .cell-code}
-true_parameters
-```
+    true_parameters
 
-::: {.cell-output .cell-output-stdout}
            parameter true_value
     1      intercept  -10.88137
     2   beta_temp_wc    0.35000
@@ -593,8 +511,7 @@ true_parameters
     6     beta_year3    0.15000
     7       field_sd    0.40000
     8         iid_sd    0.15000
-:::
-:::::::
+
 
 ### Results:
 
