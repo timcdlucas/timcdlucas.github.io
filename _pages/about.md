@@ -61,12 +61,9 @@ Amber Vayani. Understanding the relationship between indoor environment and heal
 Carolina Molina Tabares. Developing eDNA sampling for Aedes mosquitos. [Scholar](https://scholar.google.com/citations?user=zmwfYX8AAAAJ&hl=en&oi=ao)
 
 
-### Pre docs
-
-Samana Bano. NIHR predoctoral fellow. New methods and software for disease mapping.
-
-
 ### Lab Alumni
+
+Samana Bano. NIHR predoctoral fellow. New methods and software for disease mapping. Now a PhD student at the University of Cambridge.
 
 Nidhi Shukla. [@nidhienv01](https://twitter.com/nidhienv01). Machine learning and statistical methods for handling resolution mismatch in air pollution. [Scholar](https://scholar.google.com/citations?hl=en&user=wOcmZkgAAAAJ) 
 
