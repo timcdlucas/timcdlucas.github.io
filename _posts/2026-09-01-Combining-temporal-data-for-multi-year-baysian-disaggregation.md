@@ -1,24 +1,19 @@
 
 
-Understanding spatial models with causal inference
+A practical guide to pooling annual data for Bayesian disaggregation regression in R
 =============================
 
-Rohan Arambepola and I wrote this review on spatial methods and how the fit into a causal framework. 
-I thought it was really useful at the time and still do.
 
-[pdf](https://github.com/timcdlucas/spatial_causal/blob/master/Spatial_Causal_Cut.pdf)
+This post is a guest post by my predoctoral fellow, Samana.
 
-However, we didn't manage to get it published (a lot was going on and a lot is still going on) and I just don't have the energy for it anymore. 
-The paper is now probably a bit out of date, which makes it even harder to find time to update and submit.
-And preprint archives are a bit funny about review articles.
+Bayesian spatial disaggregation gives you a high resolution risk surface from low-resolution case counts ..... but only one year at a time. This post shows how to pool several years into a single model fit.
 
-So I'm going to host it here.
-It can live here indefinitely.
-Maybe it will help some people think things through.
+Hi all, my name is Samana and I'm a predoctoral fellow and I've been working on the problem of a multi-year disaggregation model!
 
-The core arguments are that there are a huge variety of spatial methods that do various things.
-One way to understand what they are doing is to view them through a causal lense.
-Then you see that most models are just "adjusting" for space in one way or another.
+In this blog I will be presenting a recipe of how to do a multi-year disaggregation model fit.
 
-We use examples from malaria mapping and species distribution modelling.
-SDM in particular has a ton of fairly ad hoc methods and maybe this review will help people understand what those methods are trying to do.
+Currently, using the disaggregation package we can only really fit one model per time slice of data we might have, but this blog aims to change that and let you fit a disag model with multiple years of data.
+
+Part A demonstrates the mechanics without a time trend; Part B adds a time spline to the six-year model. This blog is part A.
+
+This post shows how to combine annual `disag_data` objects and fit one pooled spatial disaggregation model. It demonstrates shared effects across years and it is not a full spatio-temporal model with separate spatial field for each year.
