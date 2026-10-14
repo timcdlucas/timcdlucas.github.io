@@ -38,7 +38,7 @@ This post shows how to combine annual `disag_data` objects and fit one pooled sp
 ![These figures above show the resolution mismatch; on the left we have
 the low resolution public health case counts and on the right we have
 the high resolution environmental satellite covariates (Nandi et
-al. 2023,https://doi.org/10.18637/jss.v106.i11).](images/image.png)*These
+al. 2023,https://doi.org/10.18637/jss.v106.i11).](/images/image.png)*These
 figures above show the resolution mismatch; on the left we have the low
 resolution public health case counts and on the right we have the high
 resolution environmental satellite covariates (Nandi et al. 2023,
