@@ -1,8 +1,7 @@
 
 
-Understanding spatial models with causal inference: a
-non-mathematical primer
-=============================
+Understanding spatial models with causal inference: a non-mathematical primer
+=================================================
 
 Rohan Arambepola and I wrote this review on spatial methods and how the fit into a causal framework. 
 I thought it was really useful at the time and still do.
