@@ -201,20 +201,18 @@ The dropbox folder contains two raster tiff files, case counts in a csv,
 the true parameters used for simulation and the geography in a gpkg
 file.
 
-::: cell
-``` {.r .cell-code}
 ## Packages
+    
+    library(dplyr)
+    library(sf)
+    library(terra)
+    library(splines)
+    library(disaggregation)   
+    
+    # Point this at wherever you downloaded/cloned the dataset described above
+    data_dir <- "C:/My_drive/simdata_madagascar"
 
-library(dplyr)
-library(sf)
-library(terra)
-library(splines)
-library(disaggregation)   
 
-# Point this at wherever you downloaded/cloned the dataset described above
-data_dir <- "C:/My_drive/simdata_madagascar"
-```
-:::
 
 ### Step 1 : Read the dataset
 
