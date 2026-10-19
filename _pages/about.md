@@ -28,6 +28,10 @@ Before that I worked with Deirdre Hollingsworth and the Malaria Atlas Project at
 Current Vacancies/Opportunities
 --------------------------------
 
+PhD studentship in Air Conditioning and health. 
+Fully funded. Places for international students as well but will be more competitive.
+https://centa.ac.uk/studentship/2027-l13-the-role-of-air-conditioning-in-both-causing-and-protecting-against-extreme-heat/
+
 If you are a student looking for opportunities such as masters or PhD projects please email to say hello.
 There are studentships or [pre-doctoral fellowships](https://www.nihr.ac.uk/explore-nihr/academy-programmes/fellowship-programme.htm#one) we could develop a project for.
 
